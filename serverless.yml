@@ -1,0 +1,28 @@
+service: poc-lambda
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+functions:
+  app:
+    handler: handler.handler
+    events:
+      - http:
+          path: generate-pdf
+          method: get
+    memorySize: 2048
+    timeout: 30
+    layers:
+      - arn:aws:lambda:us-east-1:764866452798:layer:chrome-aws-lambda:47
+
+package:
+  individually: true
+
+plugins:
+  - serverless-webpack
+  - serverless-plugin-include-dependencies
+
+custom:
+  webpack:
+    includeModules: true 

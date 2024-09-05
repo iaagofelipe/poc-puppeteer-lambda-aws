@@ -1,0 +1,30 @@
+{
+  "name": "poc-lambda",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "serverless deploy",
+    "offline": "serverless offline",
+    "package:layer": "cd lambda-layer && zip -r ../layer.zip ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fastify/aws-lambda": "^4.1.0",
+    "@sparticuz/chromium": "^119.0.2",
+    "fastify": "^4.28.1",
+    "puppeteer-core": "^23.3.0"
+  },
+  "devDependencies": {
+    "bufferutil": "^4.0.8",
+    "serverless": "^3.39.0",
+    "serverless-offline": "^13.8.0",
+    "serverless-plugin-include-dependencies": "^6.1.1",
+    "serverless-webpack": "^5.14.1",
+    "utf-8-validate": "^5.0.10",
+    "webpack": "^5.94.0",
+    "webpack-node-externals": "^3.0.0"
+  }
+}

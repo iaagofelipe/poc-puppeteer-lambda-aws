@@ -1,0 +1,9 @@
+{
+    "httpMethod": "GET",
+    "path": "/generate-pdf",
+    "headers": {},
+    "queryStringParameters": {},
+    "body": null,
+    "isBase64Encoded": false
+}
+  
